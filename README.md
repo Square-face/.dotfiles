@@ -24,3 +24,24 @@ cargo install ncspot --features cover
 
 </details>
 
+## Tmux
+
+<details>
+<summary>Installation</summary>
+Installed using the operatings systems package manager.
+
+</details>
+
+<details>
+    <summary>Configuration</summary>
+
+### File
+./tmux.conf
+
+### Symlink
+`ln -s ./tmux.conf ~/.config/tmux/tmux.conf`
+
+### First time
+Run `tmux` and hit the `<prefix>` followed by `I` (capital) to install all plugins and reload tmux 
+
+</details>
