@@ -20,7 +20,7 @@ cargo install ncspot --features cover
 ./ncspot.toml
 
 ### Symlink
-`ln -S ./ncspot.toml ~/.config/ncspot/config.toml`
+`ln -s ./ncspot.toml ~/.config/ncspot/config.toml`
 
 </details>
 
