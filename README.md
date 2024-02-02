@@ -45,3 +45,22 @@ Installed using the operatings systems package manager.
 Run `tmux` and hit the `<prefix>` followed by `I` (capital) to install all plugins and reload tmux 
 
 </details>
+
+## Starship
+
+<details>
+<summary>Installation</summary>
+Installed using the operatings systems package manager.
+
+</details>
+
+<details>
+    <summary>Configuration</summary>
+
+### File
+./starship.toml
+
+### Symlink
+`ln -s ./starship.toml ~/.config/starship.toml`
+
+</details>

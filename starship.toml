@@ -1,0 +1,59 @@
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format = """
+(\
+$git_branch\
+[](fg:#39B0C6 bg:#3833CC)\
+[\
+( $rust )\
+[](fg:#3833CC)\
+](bg:#3833CC bold))\
+$directory\
+$fill\
+$cmd_duration
+$character(bold green)"""
+
+right_format = """$battery$time"""
+
+[git_branch]
+style = "fg:#3E0E05 bg:#39B0C6 bold"
+format = "[  $branch ]($style)"
+
+[directory]
+style = "fg:#e3e5e5"
+format = "[ $path ]($style)"
+truncation_length = 2
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+
+[rust]
+style = ""
+symbol = "🦀"
+version_format = "${raw}"
+format = "$symbol $version"
+
+[cmd_duration]
+show_notifications = true
+min_time = 0
+format = "[$duration ]($style)"
+
+# Disable the package module, hiding it from the prompt completely
+[time]
+style = "fg:#7F8080"
+format = "[$time]($style)"
+disabled = false
