@@ -60,7 +60,9 @@ Installed using the operatings systems package manager.
 ### File
 ./starship.toml
 
-### Symlink
-`ln -s ./starship.toml ~/.config/starship.toml`
+### Environment variable
+add `export STARSHIP_CONFIG=~/.dotfiles/starship.toml` to your .zshrc/.bashrc file (set by default in `./zshrc`).
+
+If necessary, replace the path to the actual path to `./starship.toml`
 
 </details>
