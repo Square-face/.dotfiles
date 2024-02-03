@@ -3,56 +3,58 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Inserts a blank line between shell prompts
-add_newline = true
+add_newline = false
 
 format = """
-(\
+(\n\
+$rust\
+[ ](fg:#5294aa bg:#006699)\
 $git_branch\
-[](fg:#39B0C6 bg:#3833CC)\
-[\
-( $rust )\
-[](fg:#3833CC)\
-](bg:#3833CC bold))\
-$directory\
-$fill\
+[](fg:#006699)\
+)\
+\
+$fill$character\
 $cmd_duration
-$character(bold green)"""
+\
+(\
+$directory\
+)\
+[ ](fg:#5294aa)\
+"""
 
-right_format = """$battery$time"""
+right_format = """$time $battery"""
+
+[character]
+success_symbol = '[  ](green)'
+error_symbol = '[  ](red)'
 
 [git_branch]
-style = "fg:#3E0E05 bg:#39B0C6 bold"
-format = "[  $branch ]($style)"
+style = "fg:#ffffff bg:#006699 bold"
+format = "[  ](fg:#f34f29  bg:#006699)[$branch ]($style)"
 
 [directory]
-style = "fg:#e3e5e5"
+style = "fg:#e3e5e5 bg:#5294aa"
 format = "[ $path ]($style)"
 truncation_length = 2
-truncation_symbol = "…/"
-
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+truncation_symbol = "󰇘/"
 
 [battery]
-full_symbol = '🔋 '
-charging_symbol = '⚡️ '
-discharging_symbol = '💀 '
+full_symbol = '󰁹 '
+charging_symbol = '󰢜 '
+discharging_symbol = '󰁺 '
+format = '[$symbol$percentage]($style)'
 
 [rust]
 style = ""
 symbol = "🦀"
 version_format = "${raw}"
-format = "$symbol $version"
+format = "[ $symbol $version](bg:#006699 bold)"
 
 [cmd_duration]
 show_notifications = true
-min_time = 0
-format = "[$duration ]($style)"
+min_time = 2000
+format = "took [$duration ]($style)"
 
-# Disable the package module, hiding it from the prompt completely
 [time]
 style = "fg:#7F8080"
 format = "[$time]($style)"
