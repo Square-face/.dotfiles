@@ -2,7 +2,30 @@
 A collection of dotfiles that I have manually configured for my need.
 Feel free to copy any settings if they seem interesting
 
+If cloning this repo it is recommended to place it in home
+
+## ZSH
+
+<details>
+<summary>Installation</summary>
+Install using the operating systems package manager
+
+</details>
+
+<details>
+    <summary>Configuration</summary>
+
+### Set as shell
+run `chsh -s $(which zsh)`
+
+### Symlink
+`ln -s ~/.dotfiles/zshrc ~/.zshrc`
+
+</details>
+
+
 ## ncspot
+
 <details>
 <summary>Installation</summary>
 
@@ -16,9 +39,6 @@ cargo install ncspot --features cover
 <details>
     <summary>Configuration</summary>
 
-### File
-./ncspot.toml
-
 ### Symlink
 `ln -s ./ncspot.toml ~/.config/ncspot/config.toml`
 
@@ -28,15 +48,12 @@ cargo install ncspot --features cover
 
 <details>
 <summary>Installation</summary>
-Installed using the operatings systems package manager.
+Installed using the operating systems package manager.
 
 </details>
 
 <details>
     <summary>Configuration</summary>
-
-### File
-./tmux.conf
 
 ### Symlink
 `ln -s ./tmux.conf ~/.config/tmux/tmux.conf`
@@ -50,15 +67,12 @@ Run `tmux` and hit the `<prefix>` followed by `I` (capital) to install all plugi
 
 <details>
 <summary>Installation</summary>
-Installed using the operatings systems package manager.
+Installed using the operating systems package manager.
 
 </details>
 
 <details>
     <summary>Configuration</summary>
-
-### File
-./starship.toml
 
 ### Environment variable
 add `export STARSHIP_CONFIG=~/.dotfiles/starship.toml` to your .zshrc/.bashrc file (set by default in `./zshrc`).
