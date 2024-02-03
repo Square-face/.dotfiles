@@ -1,4 +1,5 @@
 
+export PATH=$HOME/.cargo/bin:$PATH
 export STARSHIP_CONFIG=~/.dotfiles/starship.toml
 
 alias v='nvim'
