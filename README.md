@@ -90,6 +90,7 @@ Install using the operating systems package manager
 ### Fonts
 - Fira Code Nerd Font
     - Installed like any other system font
+</details>
 
 <details>
     <summary>Configuration</summary>
