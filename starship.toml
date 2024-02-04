@@ -24,6 +24,9 @@ $directory\
 
 right_format = """$time $battery"""
 
+[fill]
+symbol=' '
+
 [character]
 success_symbol = '[  ](green)'
 error_symbol = '[  ](red)'
