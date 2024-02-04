@@ -77,6 +77,26 @@ run `chsh -s $(which zsh)`
 
 
 
+## Kitty
+<details>
+<summary>Installation</summary>
+Install using the operating systems package manager
+
+</details>
+
+
+<details>
+    <summary>Configuration</summary>
+
+### Symlink
+`ln -s ~/.dotfiles/kitty.conf ~/.config/kitty/kitty.conf`
+
+</details>
+
+
+
+
+
 ## ncspot
 
 <details>
