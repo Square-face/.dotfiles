@@ -84,6 +84,12 @@ Install using the operating systems package manager
 
 </details>
 
+<details>
+    <summary>Dependencies</summary>
+
+### Fonts
+- Fira Code Nerd Font
+    - Installed like any other system font
 
 <details>
     <summary>Configuration</summary>
