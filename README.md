@@ -4,6 +4,55 @@ Feel free to copy any settings if they seem interesting
 
 If cloning this repo it is recommended to place it in home
 
+
+
+
+
+
+## Rust
+<details>
+<summary>Installation</summary>
+Rustup install script `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+
+</details>
+
+<details>
+    <summary>Dependencies</summary>
+Some linux distros don't come preinstalled with all the required dependencies.
+Here are some distros and the command required to install them
+
+### Fedora
+`sudo dnf install gcc`
+
+</details>
+Install good tools: `cargo install starship exa bat --locked`
+
+
+
+
+
+## Starship
+
+<details>
+<summary>Installation</summary>
+Installed using the operating systems package manager.
+
+</details>
+
+<details>
+    <summary>Configuration</summary>
+
+### Environment variable
+add `export STARSHIP_CONFIG=~/.dotfiles/starship.toml` to your .zshrc/.bashrc file (set by default in `./zshrc`).
+
+If necessary, replace the path to the actual path to `./starship.toml`
+
+</details>
+
+
+
+
+
 ## ZSH
 
 <details>
@@ -11,6 +60,7 @@ If cloning this repo it is recommended to place it in home
 Install using the operating systems package manager
 
 </details>
+
 
 <details>
     <summary>Configuration</summary>
@@ -22,6 +72,9 @@ run `chsh -s $(which zsh)`
 `ln -s ~/.dotfiles/zshrc ~/.zshrc`
 
 </details>
+
+
+
 
 
 ## ncspot
@@ -44,6 +97,10 @@ cargo install ncspot --features cover
 
 </details>
 
+
+
+
+
 ## Tmux
 
 <details>
@@ -58,25 +115,8 @@ Installed using the operating systems package manager.
 ### Symlink
 `ln -s ./tmux.conf ~/.config/tmux/tmux.conf`
 
-### First time
+### Post install
 Run `tmux` and hit the `<prefix>` followed by `I` (capital) to install all plugins and reload tmux 
 
 </details>
 
-## Starship
-
-<details>
-<summary>Installation</summary>
-Installed using the operating systems package manager.
-
-</details>
-
-<details>
-    <summary>Configuration</summary>
-
-### Environment variable
-add `export STARSHIP_CONFIG=~/.dotfiles/starship.toml` to your .zshrc/.bashrc file (set by default in `./zshrc`).
-
-If necessary, replace the path to the actual path to `./starship.toml`
-
-</details>
