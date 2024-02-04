@@ -120,3 +120,25 @@ Run `tmux` and hit the `<prefix>` followed by `I` (capital) to install all plugi
 
 </details>
 
+
+
+
+
+## Hyprland
+
+<details>
+<summary>Installation</summary>
+Installed using the operating systems package manager.
+
+</details>
+
+<details>
+    <summary>Configuration</summary>
+
+### Symlink
+`ln -s ~/.dotfiles/hyprland.conf ~/.config/hypr/hyprland.conf`
+
+### Select Hyprland when logging in
+
+</details>
+
