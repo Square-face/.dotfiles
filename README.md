@@ -169,3 +169,19 @@ Installed using the operating systems package manager.
 
 </details>
 
+### Waybar
+
+<details>
+<summary>Installation</summary>
+Installed using the operating systems package manager.
+
+</details>
+
+<details>
+    <summary>Configuration</summary>
+
+### Symlink
+`ln -s ~/.dotfiles/waybar ~/.config/waybar`
+
+</details>
+#### Symlink
