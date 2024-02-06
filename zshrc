@@ -25,4 +25,14 @@ alias l='exa -a'
 alias la='exa -la'
 alias ll='exa -l'
 
+# Git schortcuts
+alias g='git'
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gp='git push'
+alias gpl='git pull'
+
 eval "$(starship init zsh)"
