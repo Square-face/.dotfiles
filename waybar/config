@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": [ "clock"],
-    "modules-right": ["cpu", "memory", "pulseaudio", "network", "temperature", "backlight", "battery"],
+    "modules-right": ["memory", "cpu", "custom/audio", "network", "temperature", "backlight", "battery"],
     // Modules configuration
     "hyprland/workspaces": {
         "format": "{windows}",
@@ -20,6 +20,13 @@
             "class<kitty>": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
         },
     },
+      "custom/audio": {
+          "exec": "~/.dotfiles/waybar/interfaces/target/debug/interfaces",
+          "return-type": "json",
+          "interval": 1,
+          "signal": 8,
+          "on_click": "",
+      },
       "clock": {
         "format": "{:%A, %B %d, %Y (%R)}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -49,10 +56,20 @@
     "cpu": {
         "interval": 1,
          "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
-         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+     "format-icons": [
+          "<span color='#69ff94'>▁</span>", // green
+          "<span color='#2aa9ff'>▂</span>", // blue
+          "<span color='#f8f8f2'>▃</span>", // white
+          "<span color='#f8f8f2'>▄</span>", // white
+          "<span color='#ffffa5'>▅</span>", // yellow
+          "<span color='#ffffa5'>▆</span>", // yellow
+          "<span color='#ff9977'>▇</span>", // orange
+          "<span color='#dd532e'>█</span>"  // red
+     ]
     },
     "memory": {
-        "format": "{}% "
+        "interval": 1,
+        "format": "{used}GB"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -92,7 +109,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
