@@ -38,4 +38,6 @@ alias gcm='git commit -m'
 alias gp='git push'
 alias gpl='git pull'
 
+alias cwd='pwd'
+
 eval "$(starship init zsh)"
