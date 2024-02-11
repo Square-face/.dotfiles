@@ -1,47 +1,51 @@
 * {
-    font-family: 'Fira Code', monospace;
-    font-size: 15px;
+    font-family: 'Fira Code Nerd Font', monospace;
     margin: 0;
     padding: 0;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
     color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
-}
-
-.modules-left, .modules-center, .modules-right {
-    margin-top: 0.4em; 
 }
 
 #workspaces {
-    padding: 0 0.1em 0 0;
-    border-radius: 0;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 5px;
+    margin: 0 5px 0 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 #workspaces button {
-    background-color: transparent;
-    margin: 0 7px;
-    padding: 0;
-    color: rgb(100, 100, 100);
-    transition-property: color;
-    transition-duration: .1s;
+    border: none;
+    background-color: white;
+    font-size: 0;
+    min-height: 10px;
+    min-width: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition-property: min-width;
+    transition-duration: .6s;
 }
 
 #workspaces button.active {
-    color: rgb(200, 200, 200);
+    background-color: white;
+    min-width: 30px;
 }
 
 #workspaces button:hover {
-    background: transparent;
+    background-color: gray;
     border: none;
     box-shadow: none;
-    padding: 0;
-    color: rgb(255, 255, 255);
 }
 
+.modules-right {
+    padding: 0 10px 0 0;
+}
 
+#custom-audio, #backlight, #temperature, #network, #memory {
+    padding: 0 7px 0 0;
+}
+#battery {
+    padding: 0 10px 0 0;
+}

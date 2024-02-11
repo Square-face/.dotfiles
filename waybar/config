@@ -7,18 +7,10 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": [ "clock"],
-    "modules-right": ["memory", "cpu", "custom/audio", "network", "temperature", "backlight", "battery"],
+    "modules-right": ["cpu", "memory", "network", "temperature", "backlight", "custom/audio", "battery"],
     // Modules configuration
     "hyprland/workspaces": {
-        "format": "{windows}",
-        "format-window-separator": " ",
-        "window-rewrite-default": " ",
-        "window-rewrite": {
-            "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
-            "class<firefox>": " ", // Windows whose classes are "firefox"
-            "class<kitty>.title<nvim>": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
-            "class<kitty>": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
-        },
+        "format": "",
     },
       "custom/audio": {
           "exec": "~/.dotfiles/waybar/interfaces/target/debug/interfaces",
@@ -57,74 +49,62 @@
         "interval": 1,
          "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
      "format-icons": [
-          "<span color='#69ff94'>▁</span>", // green
-          "<span color='#2aa9ff'>▂</span>", // blue
-          "<span color='#f8f8f2'>▃</span>", // white
-          "<span color='#f8f8f2'>▄</span>", // white
-          "<span color='#ffffa5'>▅</span>", // yellow
-          "<span color='#ffffa5'>▆</span>", // yellow
-          "<span color='#ff9977'>▇</span>", // orange
-          "<span color='#dd532e'>█</span>"  // red
+          "<span color='#91f109'> </span>",
+          "<span color='#b4db19'>▁</span>",
+          "<span color='#dbce1c'>▂</span>",
+          "<span color='#e09e18'>▃</span>",
+          "<span color='#e38616'>▄</span>",
+          "<span color='#e56e13'>▅</span>",
+          "<span color='#e44013'>▆</span>",
+          "<span color='#e32913'>▇</span>",
+          "<span color='#e21212'>█</span>",
      ]
     },
     "memory": {
         "interval": 1,
-        "format": "{used}GB"
+        "format": "{icon}",
+         "format-icons": [
+              "<span color='#91f109'> </span>",
+              "<span color='#b4db19'>▁</span>",
+              "<span color='#dbce1c'>▂</span>",
+              "<span color='#e09e18'>▃</span>",
+              "<span color='#e38616'>▄</span>",
+              "<span color='#e56e13'>▅</span>",
+              "<span color='#e44013'>▆</span>",
+              "<span color='#e32913'>▇</span>",
+              "<span color='#e21212'>█</span>",
+         ]
     },
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": [" ", "", " "]
+        "format-critical": "<span color='#e21212'>{icon}</span>",
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", ""]
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", "", "", "", "", "", ""]
     },
     "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
+        "format": "{icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-alt": "{capacity}% {icon}",
+        "format-icons": ["<span color='#e21212'></span>", "", "", "", ""]
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{icon}",
+        "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
+        "format-alt": " {essid} ({signalStrength}%) ",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}\n󱚺 : {bandwidthUpBits}\n󱚶 : {bandwidthDownBits}"
     },
 }
 
