@@ -1,0 +1,29 @@
+<icecast>
+    <hostname>localhost</hostname>
+    <location>earth</location>
+    <admin>icemaster@localhost</admin>
+    <fileserve>1</fileserve>
+
+    <listen-socket>
+        <port>8000</port>
+        <shoutcast-mount>/live.mp3</shoutcast-mount>
+    </listen-socket>
+
+    <master-server>127.0.0.1</master-server>
+    <master-server-port>8001</master-server-port>
+    <master-update-interval>120</master-update-interval>
+    <master-username>relay</master-username>
+    <master-password>hackme</master-password>
+    <relays-on-demand>0</relays-on-demand>
+
+    <relay>
+        <server>127.0.0.1</server>
+        <port>8001</port>
+        <mount>/example.ogg</mount>
+        <local-mount>/different.ogg</local-mount>
+        <username>joe</username>
+        <password>soap</password>
+        <relay-shoutcast-metadata>0</relay-shoutcast-metadata>
+        <on-demand>1</on-demand>
+    </relay>
+</icecast>
