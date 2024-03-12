@@ -42,4 +42,8 @@ alias gpl='git pull'
 
 alias cwd='pwd'
 
+alias ta='tmux attach'
+alias tls='tmux ls'
+alias tns='tmux new'
+
 eval "$(starship init zsh)"
