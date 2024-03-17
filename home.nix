@@ -198,7 +198,9 @@
                 PATH = "$HOME/.cargo/bin:$PATH";
             };
 
-            envExtra = "eval \"$(starship init zsh)\"";
+            envExtra = 
+                ". \"$HOME/.cargo/env\"
+                eval \"$(starship init zsh)\"";
         };
 
         kitty = {

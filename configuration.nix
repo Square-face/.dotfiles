@@ -123,20 +123,29 @@
             withOpenASAR = true;
             withVencord = true;
         })
-        neovim
-        git
-        gh
-        swww
-        wofi
-        nodejs
-        corepack
+        neofetch
+
+        wget
         eza
         htop
-        neofetch
+        neovim
+
+        git
+        gh
+
+        rustup
+        gcc
+        clang
+        nodejs
+        corepack
+
+        swww
         shikane
+        wofi
+
         _1password
         _1password-gui
-        wget
+
         wineWowPackages.waylandFull
         lutris
         inputs.nix-citizen.packages.x86_64-linux.star-citizen
