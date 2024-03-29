@@ -4,6 +4,9 @@ export STARSHIP_CONFIG=~/.dotfiles/starship.toml
 export PATH=~/Applications/jdk-17.0.10/bin:$PATH
 export PATH=~/Applications/gradle-7.6.4/bin/:$PATH
 
+export EDITOR=nvim
+export VISUAL=nvim
+
 # General shortcuts
 alias c='clear'
 alias sz='source ~/.zshrc'
