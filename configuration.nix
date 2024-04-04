@@ -124,20 +124,18 @@
             withVencord = true;
         })
         neofetch
+        direnv
 
+        file
+        curl
         wget
         eza
         htop
         neovim
+        postman
 
         git
         gh
-
-        rustup
-        gcc
-        clang
-        nodejs
-        corepack
 
         swww
         shikane
