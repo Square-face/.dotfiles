@@ -105,8 +105,12 @@
         extraGroups = [ "networkmanager" "wheel" ];
         shell = pkgs.zsh;
         packages = with pkgs; [
+            postman
             firefox
             libqalculate
+
+            _1password
+            _1password-gui
         ];
     };
 
@@ -132,7 +136,6 @@
         eza
         htop
         neovim
-        postman
 
         git
         gh
@@ -141,13 +144,7 @@
         shikane
         wofi
 
-        _1password
-        _1password-gui
-
         wineWowPackages.waylandFull
-        lutris
-        inputs.nix-citizen.packages.x86_64-linux.star-citizen
-        inputs.nix-citizen.packages.x86_64-linux.lug-helper
     ];
 
     fonts.packages = with pkgs; [
