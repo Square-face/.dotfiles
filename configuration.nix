@@ -137,7 +137,6 @@
         htop
         neovim
 
-        git
         gh
 
         swww
