@@ -110,6 +110,7 @@
             postman
             firefox
             libqalculate
+            android-studio
 
             _1password
             _1password-gui
