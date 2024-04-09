@@ -53,6 +53,8 @@
 
     programs.hyprland.enable = true;
     programs.zsh.enable = true;
+    programs.neovim.enable = true;
+    programs.neovim.defaultEditor = true;
     programs.steam = {
         enable = true;
         package = pkgs.steam.override {
@@ -135,7 +137,6 @@
         wget
         eza
         htop
-        neovim
 
         gh
 
