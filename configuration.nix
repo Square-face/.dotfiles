@@ -139,6 +139,9 @@
         eza
         htop
 
+        gcc
+        nodejs
+
         gh
 
         swww
