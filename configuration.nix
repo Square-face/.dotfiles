@@ -55,6 +55,7 @@
     programs.zsh.enable = true;
     programs.neovim.enable = true;
     programs.neovim.defaultEditor = true;
+    programs.noisetorch.enable = true;
     programs.steam = {
         enable = true;
         package = pkgs.steam.override {
