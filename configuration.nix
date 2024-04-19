@@ -113,6 +113,7 @@
             libqalculate
             android-studio
             parsec-bin
+            ripgrep
 
             _1password
             _1password-gui
