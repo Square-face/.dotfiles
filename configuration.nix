@@ -112,6 +112,7 @@
             firefox
             libqalculate
             android-studio
+            parsec-bin
 
             _1password
             _1password-gui
