@@ -350,7 +350,7 @@
                     natural_scroll = "no";
                 };
 
-                sensitivity = "0.3";
+                sensitivity = "0.2";
             };
 
             general = {
