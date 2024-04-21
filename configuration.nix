@@ -135,6 +135,7 @@
         })
         neofetch
         direnv
+        netcat-gnu
 
         file
         curl
