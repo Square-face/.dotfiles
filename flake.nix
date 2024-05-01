@@ -10,6 +10,7 @@
     outputs = { self, nixpkgs, home-manager, ... }@inputs: 
     let
         system = "x86_64-linux";
+        username = "linus";
         lib = nixpkgs.lib;
         pkgs = nixpkgs.legacyPackages.${system};
     in {
@@ -22,11 +23,17 @@
             ];
         };
 
-        homeConfigurations.linus = home-manager.lib.homeManagerConfiguration {
+        homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
             extraSpecialArgs = {inherit inputs;};
             inherit pkgs;
             modules = [
                 ./home.nix
+                {
+                    home = {
+                        inherit username;
+                        homeDirectory = "/home/${username}";
+                    };
+                }
             ];
         };
     };

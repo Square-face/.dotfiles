@@ -102,22 +102,40 @@
     # services.xserver.libinput.enable = true;
     
     # Define a user account. Don't forget to set a password with ‘passwd’.
-    users.users.linus = {
-        isNormalUser = true;
-        description = "Linus Michelsson";
-        extraGroups = [ "networkmanager" "wheel" ];
-        shell = pkgs.zsh;
-        packages = with pkgs; [
-            postman
-            firefox
-            libqalculate
-            android-studio
-            parsec-bin
-            ripgrep
+    users.users={
+        linus = {
+            isNormalUser = true;
+            description = "Linus Michelsson";
+            extraGroups = [ "networkmanager" "wheel" ];
+            shell = pkgs.zsh;
+            packages = with pkgs; [
+                postman
+                firefox
+                libqalculate
+                android-studio
+                parsec-bin
+                ripgrep
 
-            _1password
-            _1password-gui
-        ];
+                _1password
+                _1password-gui
+            ];
+        };
+
+        ctf = {
+            isNormalUser = true;
+            shell = pkgs.zsh;
+            packages = with pkgs; [
+                libqalculate
+                python310
+                rustc
+                cargo
+                clippy
+                rustfmt
+
+                _1password
+                _1password-gui
+            ];
+        };
     };
 
     # Allow unfree packages
@@ -136,6 +154,7 @@
         neofetch
         direnv
         netcat-gnu
+        ripgrep
 
         file
         curl
@@ -175,6 +194,7 @@
     
     # Open ports in the firewall.
     networking.firewall={
+        allowedTCPPorts = [ 22 ];
         allowedTCPPortRanges = [
             { from = 5000; to = 6000; }
         ];

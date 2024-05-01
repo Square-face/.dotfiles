@@ -1,9 +1,6 @@
-{ lib, config, pkgs, ... }:
+{ lib, config, pkgs, username, ... }:
 
 {
-    home.username = "linus";
-    home.homeDirectory = "/home/linus";
-  
     programs = {
         tmux = {
             enable = true;
