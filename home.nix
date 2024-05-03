@@ -154,6 +154,7 @@
         zsh = {
             enable = true;
             autocd = true;
+            history.share = false;
             shellAliases = {
                 "."="cd";
                 ".."="cd ..";
