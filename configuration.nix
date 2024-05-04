@@ -51,6 +51,8 @@
     services.xserver.displayManager.gdm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
 
+    virtualisation.docker.enable = true;
+
     programs.hyprland.enable = true;
     programs.zsh.enable = true;
     programs.neovim.enable = true;
@@ -106,7 +108,7 @@
         linus = {
             isNormalUser = true;
             description = "Linus Michelsson";
-            extraGroups = [ "networkmanager" "wheel" ];
+            extraGroups = [ "networkmanager" "wheel" "docker" ];
             shell = pkgs.zsh;
             packages = with pkgs; [
                 postman
