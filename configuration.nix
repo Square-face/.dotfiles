@@ -14,6 +14,7 @@
     # Bootloader.
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
+    boot.supportedFilesystems = [ "ntfs" ];
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
     networking.hostName = "cry-nix"; # Define your hostname.
@@ -116,6 +117,8 @@
                 libqalculate
                 android-studio
                 parsec-bin
+                ntfs3g
+                fuse
 
                 _1password
                 _1password-gui
