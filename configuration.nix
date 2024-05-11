@@ -199,7 +199,7 @@
     
     # Open ports in the firewall.
     networking.firewall={
-        allowedTCPPorts = [ 22 ];
+        allowedTCPPorts = [ 22 8000 ];
         allowedTCPPortRanges = [
             { from = 5000; to = 6000; }
         ];
