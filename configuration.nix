@@ -158,6 +158,7 @@
         neofetch
         direnv
         netcat-gnu
+        xclip
         ripgrep
         clang-tools
 
