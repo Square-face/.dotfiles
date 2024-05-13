@@ -119,6 +119,7 @@
                 parsec-bin
                 ntfs3g
                 fuse
+                sageWithDoc
 
                 _1password
                 _1password-gui
