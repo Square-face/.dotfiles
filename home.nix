@@ -167,6 +167,8 @@
                 sz  = "source ~/.zshrc";
                 cwd = "pwd";
 
+                clip = "xsel -b";
+
                 v  = "nvim";
                 vi = "nvim init.*";
                 vm = "nvim main.*";
