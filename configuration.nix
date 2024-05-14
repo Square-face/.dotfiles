@@ -120,6 +120,7 @@
                 ntfs3g
                 fuse
                 sageWithDoc
+                feh
 
                 _1password
                 _1password-gui
@@ -168,6 +169,7 @@
         wget
         eza
         htop
+        busybox
 
         gcc
         nodejs
