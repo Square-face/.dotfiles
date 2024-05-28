@@ -121,6 +121,7 @@
                 fuse
                 sageWithDoc
                 feh
+                texliveFull
 
                 _1password
                 _1password-gui
